@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: alsa-scarlett-gui VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-01 21:56+0200\n"
-"PO-Revision-Date: 2022-05-28 01:21+0200\n"
+"PO-Revision-Date: 2022-05-29 23:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: French <>\n"
 "Language: fr_FR\n"
@@ -78,7 +78,7 @@ msgstr "Sorties Analogiques"
 #: ../iface-unknown.c:26
 msgid "Are you running a recent kernel with Scarlett Gen 2/3 support enabled?"
 msgstr ""
-"Avez vous installé un noyau récent avec prise en charges des cartes Scarlett "
+"Avez-vous installé un noyau récent avec prise en charges des cartes Scarlett "
 "Gen 2/3 ?"
 
 #: ../window-hardware.c:49
@@ -88,7 +88,7 @@ msgstr "Grandes Gen 3"
 #: ../iface-unknown.c:28
 #, c-format
 msgid "Check dmesg output for \"%s\""
-msgstr "Vérifier la sortie dmesg pour \"%s\""
+msgstr "Vérifiez la sortie dmesg pour \"%s\""
 
 #: ../window-routing.c:232
 msgid "Clear"
