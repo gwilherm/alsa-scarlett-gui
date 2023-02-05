@@ -4,7 +4,7 @@
 #include "widget-boolean.h"
 
 static void button_clicked(GtkWidget *widget, struct alsa_elem *elem) {
-  int value = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
+  int value = gtk_switch_get_active(GTK_SWITCH(widget));
 
   alsa_set_elem_value(elem, value);
 }
@@ -26,9 +26,9 @@ static void toggle_button_updated(struct alsa_elem *elem) {
   gtk_widget_set_sensitive(elem->widget, is_writable);
 
   int value = alsa_get_elem_value(elem);
-  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(elem->widget), value);
+  gtk_switch_set_active(GTK_SWITCH(elem->widget), value);
 
-  toggle_button_set_text(elem, elem->bool_text[value]);
+  /* gtk_switch_set_text(elem, elem->bool_text[value]); */
 }
 
 GtkWidget *make_boolean_alsa_elem(
@@ -36,7 +36,7 @@ GtkWidget *make_boolean_alsa_elem(
   const char       *disabled_text,
   const char       *enabled_text
 ) {
-  GtkWidget *button = gtk_toggle_button_new();
+  GtkWidget *button = gtk_switch_new();
 
   g_signal_connect(
     button, "clicked", G_CALLBACK(button_clicked), elem
