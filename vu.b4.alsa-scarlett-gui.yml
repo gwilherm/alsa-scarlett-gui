@@ -11,11 +11,14 @@ finish-args:
   - --socket=wayland
   # Needs access to ALSA device nodes:
   - --device=all
+build-options:
+  secret-env:
+    - APP_VERSION
 modules:
   - name: alsa-scarlett-gui
     buildsystem: simple
     build-commands:
-      - make install PREFIX=$FLATPAK_DEST
+      - make -j4 install PREFIX=$FLATPAK_DEST
     sources:
       - type: dir
         path: ./src
